@@ -5,15 +5,15 @@ import "fmt"
 type COLOR_STRING string
 
 const (
-	Reset  COLOR_STRING = "\x1b[0m"    // Text Reset
-	Black  COLOR_STRING = "\x1b[0;30m" // Black
-	Red    COLOR_STRING = "\x1b[0;31m" // Red
-	Green  COLOR_STRING = "\x1b[0;32m" // Green
-	Yellow COLOR_STRING = "\x1b[0;33m" // Yellow
-	Blue   COLOR_STRING = "\x1b[0;34m" // Blue
-	Purple COLOR_STRING = "\x1b[0;35m" // Purple
-	Cyan   COLOR_STRING = "\x1b[0;36m" // Cyan
-	White  COLOR_STRING = "\x1b[0;37m" // Wite
+	KReset  COLOR_STRING = "\x1b[0m"    // Text Reset
+	KBlack  COLOR_STRING = "\x1b[0;30m" // Black
+	KRed    COLOR_STRING = "\x1b[0;31m" // Red
+	KGreen  COLOR_STRING = "\x1b[0;32m" // Green
+	KYellow COLOR_STRING = "\x1b[0;33m" // Yellow
+	KBlue   COLOR_STRING = "\x1b[0;34m" // Blue
+	KPurple COLOR_STRING = "\x1b[0;35m" // Purple
+	KCyan   COLOR_STRING = "\x1b[0;36m" // Cyan
+	KWhite  COLOR_STRING = "\x1b[0;37m" // Wite
 
 	Bold_Black  COLOR_STRING = "\x1b[1;30m" // Bold Black
 	Bold_Red    COLOR_STRING = "\x1b[1;31m" // Bold Red
@@ -43,39 +43,39 @@ const (
 )
 
 func Default(s string) string {
-	return fmt.Sprintf("%s%s%s", Reset, s, Reset)
+	return fmt.Sprintf("%s%s%s", KReset, s, KReset)
 }
 
-func FBlack(s string) string {
-	return fmt.Sprintf("%s%s%s", Black, s, Reset)
+func Black(s string) string {
+	return fmt.Sprintf("%s%s%s", KBlack, s, KReset)
 }
 
-func FRed(s string) string {
-	return fmt.Sprintf("%s%s%s", Red, s, Reset)
+func Red(s string) string {
+	return fmt.Sprintf("%s%s%s", KRed, s, KReset)
 }
 
-func FGreen(s string) string {
-	return fmt.Sprintf("%s%s%s", Green, s, Reset)
+func Green(s string) string {
+	return fmt.Sprintf("%s%s%s", KGreen, s, KReset)
 }
 
-func FYellow(s string) string {
-	return fmt.Sprintf("%s%s%s", Yellow, s, Reset)
+func Yellow(s string) string {
+	return fmt.Sprintf("%s%s%s", KYellow, s, KReset)
 }
 
-func FBlue(s string) string {
-	return fmt.Sprintf("%s%s%s", Blue, s, Reset)
+func Blue(s string) string {
+	return fmt.Sprintf("%s%s%s", KBlue, s, KReset)
 }
 
-func FPurple(s string) string {
-	return fmt.Sprintf("%s%s%s", Purple, s, Reset)
+func Purple(s string) string {
+	return fmt.Sprintf("%s%s%s", KPurple, s, KReset)
 }
 
 func FCyan(s string) string {
-	return fmt.Sprintf("%s%s%s", Cyan, s, Reset)
+	return fmt.Sprintf("%s%s%s", KCyan, s, KReset)
 }
 
-func FWhite(s string) string {
-	return fmt.Sprintf("%s%s%s", White, s, Reset)
+func White(s string) string {
+	return fmt.Sprintf("%s%s%s", KWhite, s, KReset)
 }
 
 // ------------------
@@ -83,33 +83,33 @@ func FWhite(s string) string {
 // ------------------
 
 func BoldBlack(s string) string {
-	return fmt.Sprintf("%s%s%s", Bold_Black, s, Reset)
+	return fmt.Sprintf("%s%s%s", Bold_Black, s, KReset)
 }
 
 func BoldRed(s string) string {
-	return fmt.Sprintf("%s%s%s", Bold_Red, s, Reset)
+	return fmt.Sprintf("%s%s%s", Bold_Red, s, KReset)
 }
 
 func BoldGreen(s string) string {
-	return fmt.Sprintf("%s%s%s", Bold_Green, s, Reset)
+	return fmt.Sprintf("%s%s%s", Bold_Green, s, KReset)
 }
 
 func BoldYellow(s string) string {
-	return fmt.Sprintf("%s%s%s", Bold_Yellow, s, Reset)
+	return fmt.Sprintf("%s%s%s", Bold_Yellow, s, KReset)
 }
 
 func BoldBlue(s string) string {
-	return fmt.Sprintf("%s%s%s", Bold_Blue, s, Reset)
+	return fmt.Sprintf("%s%s%s", Bold_Blue, s, KReset)
 }
 
 func BoldPurple(s string) string {
-	return fmt.Sprintf("%s%s%s", Bold_Purple, s, Reset)
+	return fmt.Sprintf("%s%s%s", Bold_Purple, s, KReset)
 }
 
 func BoldCyan(s string) string {
-	return fmt.Sprintf("%s%s%s", Bold_Cyan, s, Reset)
+	return fmt.Sprintf("%s%s%s", Bold_Cyan, s, KReset)
 }
 
 func BoldWhite(s string) string {
-	return fmt.Sprintf("%s%s%s", Bold_White, s, Reset)
+	return fmt.Sprintf("%s%s%s", Bold_White, s, KReset)
 }
